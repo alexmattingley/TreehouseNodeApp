@@ -22,7 +22,7 @@ function user(request, response) {
 				badges: profileJson.badges.length,
 				javascriptPoints: profileJson.points.Javascript
 			}
-			response.write(values.username + values.badges);
+			response.write(values.username + ' has ' + values.badges + ' badges.\n');
 			response.end('footer\n');
 		});
 		studentProfile.on("error", function(error){
