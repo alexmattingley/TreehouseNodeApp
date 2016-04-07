@@ -26,9 +26,8 @@ function user(request, response) {
 			response.end('footer\n');
 		});
 		studentProfile.on("error", function(error){
-			response.write(error.message, function(){
-				response.end('footer\n');
-			});
+			response.write(error.message);
+			response.end('footer\n');
 		});
 	}
 }
